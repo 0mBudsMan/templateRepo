@@ -6,7 +6,7 @@ pipeline:
   properties:
     ci:
       codebase:
-        connectorRef: account.harnessCode # This is the "bridge" to Harness Code
+        # connectorRef: account.harnessCode # This is the "bridge" to Harness Code
         repoName: templateRepo    # The name of your repo
         build: <+input>                  # Allows you to pick your branch at runtime
   stages:
