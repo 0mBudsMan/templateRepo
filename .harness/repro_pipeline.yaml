@@ -13,19 +13,11 @@ pipeline:
     - stage:
         name: build
         identifier: build
-        type: CI
-        spec:
-          cloneCodebase: true
-          infrastructure:
-            type: KubernetesDirect
-            spec:
-              connectorRef: k8sconnector
-              namespace: default
-          execution:
-            steps:
-              - step:
-                  name: Run Template
-                  identifier: run_template
-                  template:
-                    templateRef: repro_step
-                    versionLabel: v1
+        template:
+          templateRef: repro_step # The identifier of your Stage Template
+          versionLabel: v1
+          templateInputs:
+            type: CI # Required for CI stages
+            # If your template has variables for the delegate, add them here:
+            delegateSelectors:
+              - k8s-delegate
