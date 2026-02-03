@@ -6,18 +6,12 @@ pipeline:
   properties:
     ci:
       codebase:
-        # connectorRef: account.harnessCode # This is the "bridge" to Harness Code
-        repoName: templateRepo    # The name of your repo
-        build: <+input>                  # Allows you to pick your branch at runtime
+        repoName: templateRepo
+        build: <+input>
   stages:
     - stage:
         name: build
         identifier: build
         template:
-          templateRef: repro_step # The identifier of your Stage Template
+          templateRef: repro_step
           versionLabel: v1
-          templateInputs:
-            type: CI # Required for CI stages
-            # If your template has variables for the delegate, add them here:
-            delegateSelectors:
-              - k8s-delegate
