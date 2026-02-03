@@ -1,0 +1,27 @@
+template:
+  name: customStage_Template
+  identifier: customStage_Template
+  versionLabel: v1
+  type: Stage
+  projectIdentifier: omtest
+  orgIdentifier: default
+  tags: {}
+  spec:
+    type: Custom
+    spec:
+      execution:
+        steps:
+          - step:
+              type: ShellScript
+              name: ShellScript_1
+              identifier: ShellScript_1
+              spec:
+                shell: Bash
+                executionTarget: {}
+                source:
+                  type: Inline
+                  spec:
+                    script: exit 1
+                environmentVariables: []
+                outputVariables: []
+              timeout: 10m
