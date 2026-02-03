@@ -3,7 +3,7 @@ template:
   identifier: repro_step
   versionLabel: v1
   type: Stage
-  projectIdentifier: omtest
+  projectIdentifier: DoNotDelete_OM
   orgIdentifier: default
   spec:
     type: CI
