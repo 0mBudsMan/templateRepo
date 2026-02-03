@@ -1,0 +1,27 @@
+template:
+  name: Repro Step
+  identifier: repro_step
+  versionLabel: v1
+  type: Stage
+  projectIdentifier: DoNotDelete_OM
+  orgIdentifier: default
+  spec:
+    type: CI
+    spec:
+      cloneCodebase: true
+      infrastructure:
+        type: KubernetesDirect
+        spec:
+          connectorRef: k8sconnector
+          namespace: default
+      execution:
+        steps:
+          - step:
+              type: Run
+              name: fail_for_retry
+              identifier: fail_for_retry
+              spec:
+                connectorRef: dockerquick_start
+                image: alpine
+                shell: Sh
+                command: exit 1

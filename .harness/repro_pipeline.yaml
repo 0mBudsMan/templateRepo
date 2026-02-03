@@ -1,7 +1,7 @@
 pipeline:
   name: Repro Branch Logic
   identifier: repro_branch_logic
-  projectIdentifier: om-test
+  projectIdentifier: omtest
   orgIdentifier: default
   properties:
     ci:
