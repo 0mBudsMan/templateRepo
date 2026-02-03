@@ -3,15 +3,11 @@ pipeline:
   identifier: repro_branch_logic
   projectIdentifier: omtest
   orgIdentifier: default
-  properties:
-    ci:
-      codebase:
-        repoName: templateRepo
-        build: <+input>
   stages:
     - stage:
-        name: build
-        identifier: build
+        name: custom
+        identifier: custom
+        tags: {}
         template:
-          templateRef: repro_step
+          templateRef: customStage_Template
           versionLabel: v1
