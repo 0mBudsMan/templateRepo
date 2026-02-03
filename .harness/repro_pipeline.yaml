@@ -3,11 +3,15 @@ pipeline:
   identifier: repro_branch_logic
   projectIdentifier: DoNotDelete_OM
   orgIdentifier: default
+  properties:
+    ci:
+      codebase:
+        repoName: templateRepo
+        build: <+input>
   stages:
     - stage:
-        name: custom
-        identifier: custom
-        tags: {}
+        name: build
+        identifier: build
         template:
-          templateRef: customStage_Template
+          templateRef: repro_step
           versionLabel: v1
