@@ -3,15 +3,17 @@ pipeline:
   identifier: repro_branch_logic
   projectIdentifier: proj1
   orgIdentifier: default
-  properties:
-    ci:
-      codebase:
-        repoName: templateRepo
-        build: <+input>
   stages:
     - stage:
         name: build
         identifier: build
-        template:
-          templateRef: repro_step
-          versionLabel: v1
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - step:
+                  name: temp
+                  identifier: temp
+                  template:
+                    templateRef: temp
+                    versionLabel: v1
