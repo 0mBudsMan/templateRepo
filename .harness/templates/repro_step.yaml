@@ -1,6 +1,6 @@
 template:
   name: Repro Step
-  identifier: om-test
+  identifier: omtest
   versionLabel: v1
   type: Stage
   projectIdentifier: proj1
