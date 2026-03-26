@@ -1,19 +1,17 @@
 pipeline:
   name: Repro Branch Logic
   identifier: repro_branch_logic
-  projectIdentifier: proj1
+  projectIdentifier: DoNotDelete_OM
   orgIdentifier: default
+  properties:
+    ci:
+      codebase:
+        repoName: templateRepo
+        build: <+input>
   stages:
     - stage:
         name: build
         identifier: build
-        type: Custom
-        spec:
-          execution:
-            steps:
-              - step:
-                  name: temp
-                  identifier: temp
-                  template:
-                    templateRef: repro_step
-                    versionLabel: v1
+        template:
+          templateRef: repro_step
+          versionLabel: v1
