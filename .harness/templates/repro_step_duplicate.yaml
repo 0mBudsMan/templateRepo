@@ -1,6 +1,6 @@
 template:
   name: Repro Step
-  identifier: repro_step
+  identifier: repro_step_duplo
   versionLabel: v1
   type: Stage
   projectIdentifier: omtest
