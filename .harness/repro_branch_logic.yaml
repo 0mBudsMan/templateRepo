@@ -1,0 +1,19 @@
+pipeline:
+  name: Repro Branch Logic
+  identifier: repro_branch_logic
+  projectIdentifier: omtest
+  orgIdentifier: default
+  stages:
+    - stage:
+        name: build
+        identifier: build
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - step:
+                  name: temp
+                  identifier: temp
+                  template:
+                    templateRef: repro_step
+                    versionLabel: v1
