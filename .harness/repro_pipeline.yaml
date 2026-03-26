@@ -15,5 +15,5 @@ pipeline:
                   name: temp
                   identifier: temp
                   template:
-                    templateRef: temp
+                    templateRef: repro_step
                     versionLabel: v1
