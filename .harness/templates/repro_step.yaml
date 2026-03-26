@@ -1,9 +1,9 @@
 template:
   name: Repro Step
-  identifier: omtest
+  identifier: repro_step
   versionLabel: v1
   type: Stage
-  projectIdentifier: proj1
+  projectIdentifier: omtest
   orgIdentifier: default
   spec:
     type: CI
