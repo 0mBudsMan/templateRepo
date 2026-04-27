@@ -3,8 +3,8 @@ template:
   identifier: customStage_Template
   versionLabel: v1
   type: Stage
-  projectIdentifier: omtest
-  orgIdentifier: default
+  projectIdentifier: intern_test
+  orgIdentifier: RahulB_Org
   tags: {}
   spec:
     type: Custom
