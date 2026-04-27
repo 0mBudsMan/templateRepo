@@ -18,8 +18,8 @@ template:
         steps:
           - step:
               type: Run
-              name: fail_for_retry
-              identifier: fail_for_retry
+              name: fail_for_retryy
+              identifier: fail_for_retryy
               spec:
                 connectorRef: dockerquick_start
                 image: alpine
