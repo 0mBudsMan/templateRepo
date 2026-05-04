@@ -24,4 +24,4 @@ template:
                 connectorRef: dockerquick_start
                 image: alpine
                 shell: Sh
-                command: exit 1
+                command: exit 0
