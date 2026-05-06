@@ -1,0 +1,14 @@
+inputSet:
+  name: ubb
+  identifier: ubb
+  orgIdentifier: default
+  projectIdentifier: DoNotDelete_OM
+  pipeline:
+    identifier: repro_branch_logic
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
