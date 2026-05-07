@@ -11,7 +11,7 @@ template:
       ci:
         codebase:
           connectorRef: githubCon
-          repoName: go-hello-world
+          repoName: <+input>
           build: <+input>
           sparseCheckout: []
     stages:
