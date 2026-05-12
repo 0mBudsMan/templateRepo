@@ -1,0 +1,38 @@
+template:
+  name: Pipeline
+  identifier: Pipeline
+  versionLabel: v1
+  type: Pipeline
+  projectIdentifier: proj1
+  orgIdentifier: default
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: Customm
+          identifier: Customm
+          description: ""
+          type: Custom
+          spec:
+            execution:
+              steps:
+                - stepGroup:
+                    name: Step Group
+                    identifier: Step_Group
+                    steps:
+                      - step:
+                          name: Run Step
+                          identifier: Run_Step
+                          template:
+                            templateRef: Run_Step
+                            versionLabel: v1
+                            templateInputs:
+                              type: Run
+                              spec:
+                                envVariables:
+                                  type: <+input>.selectOneFrom(commit,om)
+                    stepGroupInfra:
+                      type: KubernetesDirect
+                      spec:
+                        connectorRef: k8s
+          tags: {}
