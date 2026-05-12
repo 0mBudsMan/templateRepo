@@ -35,4 +35,17 @@ template:
                       type: KubernetesDirect
                       spec:
                         connectorRef: k8s
+                - step:
+                    name: Git Object Step
+                    identifier: Git_Object_Step
+                    template:
+                      templateRef: Git_Object_Step
+                      versionLabel: v1
+                      templateInputs:
+                        type: ShellScript
+                        spec:
+                          environmentVariables:
+                            - name: type
+                              type: String
+                              value: commit
           tags: {}
