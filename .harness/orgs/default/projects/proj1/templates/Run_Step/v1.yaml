@@ -1,0 +1,16 @@
+template:
+  name: Run Step
+  identifier: Run_Step
+  versionLabel: v1
+  type: Step
+  projectIdentifier: proj1
+  orgIdentifier: default
+  tags: {}
+  spec:
+    type: Run
+    spec:
+      connectorRef: account.harnessImage
+      shell: Sh
+      command: echo "hello world"
+      envVariables:
+        type: <+input>.selectOneFrom(commit,om)
