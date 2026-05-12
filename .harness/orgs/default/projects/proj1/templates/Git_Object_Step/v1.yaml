@@ -1,0 +1,24 @@
+template:
+  name: Git Object Step
+  identifier: Git_Object_Step
+  versionLabel: v1
+  type: Step
+  projectIdentifier: proj1
+  orgIdentifier: default
+  tags: {}
+  spec:
+    timeout: 10m
+    type: ShellScript
+    spec:
+      shell: Bash
+      executionTarget: {}
+      delegateSelectors: []
+      source:
+        type: Inline
+        spec:
+          script: echo "jhi"
+      environmentVariables:
+        - name: type
+          type: String
+          value: <+input>.selectOneFrom(commit,push)
+      outputVariables: []
