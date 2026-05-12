@@ -30,7 +30,7 @@ template:
                               type: Run
                               spec:
                                 envVariables:
-                                  typeee: <+input>.selectOneFrom(commit,om)
+                                  typeee: commit
                     stepGroupInfra:
                       type: KubernetesDirect
                       spec:
