@@ -13,4 +13,4 @@ template:
       shell: Sh
       command: echo "hello world"
       envVariables:
-        type: <+input>.selectOneFrom(commit,om)
+        typeee: <+input>.selectOneFrom(commit,om)
