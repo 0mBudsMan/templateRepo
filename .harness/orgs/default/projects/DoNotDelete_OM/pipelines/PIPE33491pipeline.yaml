@@ -19,4 +19,14 @@ pipeline:
                   template:
                     templateRef: account.PIPE33491
                     versionLabel: v1
+                    templateInputs:
+                      steps:
+                        - step:
+                            identifier: ShellScript_1
+                            type: ShellScript
+                            spec:
+                              environmentVariables:
+                                - name: hello
+                                  type: String
+                                  value: <+input>
         tags: {}
