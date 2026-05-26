@@ -13,8 +13,16 @@ pipeline:
           execution:
             steps:
               - step:
+                  type: ShellScript
                   name: refStep
                   identifier: refStep
-                  template:
-                    templateRef: repro33491_T
-                    versionLabel: v1
+                  timeout: 10m
+                  spec:
+                    shell: Bash
+                    onDelegate: true
+                    source:
+                      type: Inline
+                      spec:
+                        script: echo "no template ref now"
+                    environmentVariables: []
+                    outputVariables: []
