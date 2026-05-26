@@ -1,0 +1,28 @@
+pipeline:
+  name: repro33491_P2
+  identifier: repro33491_P2
+  projectIdentifier: DoNotDelete_OM
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: stage1
+        identifier: stage1
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - step:
+                  type: ShellScript
+                  name: plainStep
+                  identifier: plainStep
+                  timeout: 10m
+                  spec:
+                    shell: Bash
+                    onDelegate: true
+                    source:
+                      type: Inline
+                      spec:
+                        script: echo "no template ref ever"
+                    environmentVariables: []
+                    outputVariables: []
