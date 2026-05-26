@@ -1,0 +1,22 @@
+pipeline:
+  name: PIPE-33491-pipeline
+  identifier: PIPE33491pipeline
+  projectIdentifier: DoNotDelete_OM
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: stage1
+        identifier: stage1
+        description: ""
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - stepGroup:
+                  name: stepgroup
+                  identifier: stepgroup
+                  template:
+                    templateRef: account.PIPE33491
+                    versionLabel: v1
+        tags: {}
