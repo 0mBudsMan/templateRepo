@@ -13,18 +13,20 @@ pipeline:
         spec:
           execution:
             steps:
-              - step:
-                  type: ShellScript
-                  name: ShellScript_1
-                  identifier: ShellScript_1
-                  spec:
-                    shell: Bash
-                    executionTarget: {}
-                    source:
-                      type: Inline
-                      spec:
-                        script: echo "ehy"
-                    environmentVariables: []
-                    outputVariables: []
-                  timeout: 10m
+              - stepGroup:
+                  name: sg1
+                  identifier: sg1
+                  template:
+                    templateRef: account.PIPE33491
+                    versionLabel: v1
+                    templateInputs:
+                      steps:
+                        - step:
+                            identifier: ShellScript_1
+                            type: ShellScript
+                            spec:
+                              environmentVariables:
+                                - name: hello
+                                  type: String
+                                  value: <+input>
         tags: {}
