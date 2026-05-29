@@ -25,6 +25,10 @@ pipeline:
                             identifier: ShellScript_1
                             type: ShellScript
                             spec:
+                              source:
+                                type: Inline
+                                spec:
+                                  script: <+input>
                               environmentVariables:
                                 - name: hello
                                   type: String
