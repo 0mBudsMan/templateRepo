@@ -1,0 +1,32 @@
+pipeline:
+  name: mnop
+  identifier: mnop
+  projectIdentifier: proj1
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: s1
+        identifier: s1
+        description: ""
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - stepGroup:
+                  name: t
+                  identifier: t
+                  template:
+                    templateRef: account.PIPE33491
+                    versionLabel: v1
+                    templateInputs:
+                      steps:
+                        - step:
+                            identifier: ShellScript_1
+                            type: ShellScript
+                            spec:
+                              environmentVariables:
+                                - name: hello
+                                  type: String
+                                  value: <+input>
+        tags: {}
