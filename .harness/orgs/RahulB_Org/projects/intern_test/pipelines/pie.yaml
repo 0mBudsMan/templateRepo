@@ -1,0 +1,9 @@
+pipeline:
+  name: pie
+  identifier: pie
+  tags: {}
+  template:
+    templateRef: p
+    versionLabel: v1
+  projectIdentifier: intern_test
+  orgIdentifier: RahulB_Org
