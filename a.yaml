@@ -1,0 +1,10 @@
+pipeline:
+  name: PIPE-34233
+  identifier: PIPE34233
+  tags: {}
+  template:
+    templateRef: p
+    versionLabel: v1
+    gitBranch: s
+  projectIdentifier: DoNotDelete_OM
+  orgIdentifier: default
