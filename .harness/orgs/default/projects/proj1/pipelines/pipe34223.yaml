@@ -5,6 +5,5 @@ pipeline:
   template:
     templateRef: pipe34223t
     versionLabel: v1
-    gitBranch: main
   projectIdentifier: proj1
   orgIdentifier: default
