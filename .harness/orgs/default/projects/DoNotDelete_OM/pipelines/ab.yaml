@@ -1,9 +1,7 @@
 pipeline:
   name: ab
   identifier: ab
-  tags:
-    repro_step: B
-    repro_source: harness_ui_branch_nondefaultQA
+  tags: {}
   template:
     templateRef: p2
     versionLabel: v1
