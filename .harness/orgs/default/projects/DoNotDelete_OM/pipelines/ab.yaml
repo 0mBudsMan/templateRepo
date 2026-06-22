@@ -1,9 +1,37 @@
 pipeline:
-  name: ab
   identifier: ab
-  tags: {}
+  name: ab
+  tags:
+    repro_step: B
+    repro_source: harness_ui_branch_nondefaultQA
   template:
     templateRef: p2
     versionLabel: v1
+    storeType: REMOTE
+    isStable: true
+  stages:
+    - stage:
+        name: s1
+        identifier: s1
+        description: ""
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - step:
+                  type: ShellScript
+                  name: ShellScript_1
+                  identifier: ShellScript_1
+                  spec:
+                    shell: Bash
+                    executionTarget: {}
+                    source:
+                      type: Inline
+                      spec:
+                        script: exit 0
+                    environmentVariables: []
+                    outputVariables: []
+                  timeout: 10m
+        tags: {}
   projectIdentifier: DoNotDelete_OM
   orgIdentifier: default
