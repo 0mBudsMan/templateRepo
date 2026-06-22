@@ -1,0 +1,11 @@
+pipeline:
+  name: ab
+  identifier: ab
+  tags:
+    repro_step: B
+    repro_source: harness_ui_branch_nondefaultQA
+  template:
+    templateRef: p2
+    versionLabel: v1
+  projectIdentifier: DoNotDelete_OM
+  orgIdentifier: default
