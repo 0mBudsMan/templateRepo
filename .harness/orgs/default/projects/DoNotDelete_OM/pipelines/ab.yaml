@@ -2,7 +2,8 @@ pipeline:
   name: ab
   identifier: ab
   tags:
-    abcd: ""
+    repro_step: A
+    repro_source: harness_ui_branch_nondefault
   template:
     templateRef: p2
     versionLabel: v1
