@@ -1,8 +1,7 @@
 pipeline:
   name: ab
   identifier: ab
-  tags:
-    abcd: ""
+  tags: {}
   template:
     templateRef: p2
     versionLabel: v1
